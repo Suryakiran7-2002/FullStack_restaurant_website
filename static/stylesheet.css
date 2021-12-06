@@ -1,0 +1,82 @@
+@import url('//fonts.googleapis.com/css2?family=Road+Rage&display=swap');
+
+.bg-orange{
+    background-color: rgb(193,69,67)
+}
+
+.font-rr{
+    font-family: 'Road Rage', cursive;
+    
+    font-size: 3em;
+
+}
+
+.font-rr-nav{
+    font-family: 'Road Rage', cursive;
+    
+    
+
+}
+.font-normal{
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo_img{
+    width: 8rem;
+    margin: auto;
+}
+
+
+.img-sl{
+    width: 100%;
+    height: 50%;
+}
+a{
+    text-decoration: none;
+    font-family: 'Road Rage', cursive;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    font-family: 'Road Rage', cursive;
+    color: grey;
+}
+
+
+.float_l{
+    float: left;
+}
+
+.float_r{
+    float: right;
+}
+
+.container-fluid{
+    padding: 0%;
+}
+
+.font_sizing_nav{
+    font-size: 1.5em;
+}
+
+footer{
+    background-color: rgb(61, 61, 61);
+    font-size: 0.7em;
+}
+
+.active{
+    background-color: rgb(141, 50, 49);
+}
+
+.background-img{
+
+    background-image: url(../static/menu/backgroud-f.jpg);
+    background-position: center;
+    
+    
+}
+
+
+.text-danger{
+    -webkit-text-stroke: 0.02rem black;
+}

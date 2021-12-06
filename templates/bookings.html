@@ -1,0 +1,111 @@
+{% extends "user.html" %}
+
+{% block content %}
+
+<div class="background-img pb-3">
+    <h2 class="font-rr-nav text-center fs-2 py-3">Bookings</h2>
+
+
+    <div class="container-lg font-rr-nav pb-5 mb-5">
+        
+
+
+        <form action="/bookings" method="POST">
+            <div class="row d-flex justify-content-center">
+
+            
+
+                <div class="col-5 justify-content-center pb-2">
+                    
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class = 'form-control'name ='date' value="{{date}}">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-5 d-flex justify-content-center">
+                        
+                        
+                    <button type="submit" class="btn bg-orange text-light font-rr-nav">Submit</button>
+
+                    
+                
+                </div>
+            </div>
+        </form>
+
+        {% if type == 1 %}
+            <hr>
+            <div class="row d-flex justify-content-center">
+
+                <div class="col-12">
+                    <p class = 'text-center fs-3 pt-3'>Bookings on {{date}}</p>
+                </div>
+    
+            </div>
+            <hr>
+
+            <div class="row d-flex justify-content-center mx-0 px-0">
+
+                <div class="col mx-0 px-0">
+                    <p class = 'text-center fs-3 pt-3'>Name</p>
+                </div>
+
+                <div class="col mx-0 px-0">
+                    <p class = 'text-center fs-3 pt-3'>No. of people</p>
+                </div>
+
+                <div class="col mx-0 px-0">
+                    <p class = 'text-center fs-3 pt-3'>Ph. no</p>
+                </div>
+
+                <div class="col mx-0 px-0">
+                    <p class = 'text-center fs-3 pt-3'>Time</p>
+                </div>
+
+                <div class="col mx-0 px-0">
+                    <p class = 'text-center fs-3 pt-3'>Email</p>
+                </div>
+                
+            </div>
+
+            <hr>
+                {% if len== 0%}
+                    <div class="row d-flex justify-content-center">No Bookings on this day</div>
+                {% else %}
+                    {% for col in data %}
+                    <div class="row d-flex justify-content-center">
+
+                        <div class="col">
+                            <p class = 'text-center'>{{col.f_name}}</p>
+                        </div>
+
+                        <div class="col">
+                            <p class = 'text-center'>{{col.nppl}}</p>
+                        </div>
+
+                        <div class="col">
+                            <p class = 'text-center'>{{col.phno}}</p>
+                        </div>
+
+                        <div class="col">
+                            <p class = 'text-center'>{{col.time}}</p>
+                        </div>
+
+                        <div class="col">
+                            <p class = 'text-center'>{{col.email}}</p>
+                        </div>
+
+
+                    
+            
+                    </div>
+                    {% endfor %}
+                {% endif %}
+        {% endif %}
+
+    </div>
+    
+    
+</div>
+{%endblock%}
