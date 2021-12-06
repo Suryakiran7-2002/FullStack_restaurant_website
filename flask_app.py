@@ -162,4 +162,4 @@ def book_table():
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(host = '192.168.1.11',port = 80,debug = True)
+    app.run(host = '0.0.0.0',debug = False)
